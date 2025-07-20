@@ -4,6 +4,7 @@
 pid=$(pgrep 4-to_infinity_and_beyond)
 
 if [ -n "$pid" ]; then
-  # Use Perl to send SIGTERM to the process
   perl -e "kill 15, $pid"
 fi
+
+exit 2
