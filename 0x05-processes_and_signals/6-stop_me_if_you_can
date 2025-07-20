@@ -1,5 +1,4 @@
-#!/bin/bash
-
+#!/usr/bin/env bash
 # Get the PID of the process without using kill or killall
 PID=$(pgrep -f 4-to_infinity_and_beyond)
 
