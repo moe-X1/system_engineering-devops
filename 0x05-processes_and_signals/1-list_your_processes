@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# A Bash script that displays all running processes including those without TTY,
-# showing USER, STAT, TIME, and COMMAND columns
+# A Bash script that displays all users running processes
 
-ps -eo user,stat,time,comm
+ps -eo user
