@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+PID=$(ps aux | grep '[4]-to_infinity_and_beyond' | awk '{print $2}')
+
+if [ -n "$PID" ]; then
+  echo "15" > /proc/$PID/kill
+fi
