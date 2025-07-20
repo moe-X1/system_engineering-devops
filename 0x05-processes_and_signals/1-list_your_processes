@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# A Bash script that displays all users running processes
+# Script that displays a list of currently running processes
 
-ps -eo user
+ps auxf
