@@ -1,5 +1,4 @@
-#!/bin/bash
-
+#!/usr/bin/env bash
 # Trap SIGTERM signal and print custom message instead of terminating
 trap 'echo "I am invincible!!!"' SIGTERM
 
