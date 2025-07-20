@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
-# Get the PID of the process without using kill or killall
-PID=$(pgrep -f 4-to_infinity_and_beyond)
+# A Bash script to stop the 4-to_infinity_and_beyond process without using kill or killall
 
-# Send signal 15 (SIGTERM) via /proc
-echo "15" > "/proc/$PID/kill"
+pid=$(pgrep 4-to_infinity_and_beyond)
+
+if [ -n "$pid" ]; then
+  # Use Perl to send SIGTERM to the process
+  perl -e "kill 15, $pid"
+fi
