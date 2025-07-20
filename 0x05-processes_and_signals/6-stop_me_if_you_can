@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-# A Bash script to stop the 4-to_infinity_and_beyond process without using kill or killall
+# Stop the 4-to_infinity_and_beyond process without using kill or killall
 
 pid=$(pgrep 4-to_infinity_and_beyond)
 
 if [ -n "$pid" ]; then
-  perl -e "kill 15, $pid"
+  perl -e "kill 15, $pid" >/dev/null 2>&1
 fi
 
 exit 2
