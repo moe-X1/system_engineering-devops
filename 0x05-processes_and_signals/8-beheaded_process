@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Get all PIDs of 7-highlander process (can be multiple)
 PIDS=$(pgrep -f "./7-highlander")
 
