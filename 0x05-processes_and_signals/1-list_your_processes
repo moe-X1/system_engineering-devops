@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# A Bash script that displays a list of all running processes in a user-oriented format,
-# including processes without TTY and showing process hierarchy
+# A Bash script that displays all running processes including those without TTY,
+# showing USER, STAT, TIME, and COMMAND columns
 
-ps -eo user,pid,ppid,%cpu,%mem,vsz,rss,tty,stat,start,time,command --forest
+ps -eo user,stat,time,comm
