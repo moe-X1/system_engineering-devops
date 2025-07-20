@@ -1,7 +1,7 @@
-#!/usr/bin/env bash
-# Find the PID of the process
-PID=$(ps aux | grep '[4]-to_infinity_and_beyond' | awk '{print $2}')
+#!/bin/bash
 
-if [ -n "$PID" ]; then
-  echo "15" > /proc/$PID/kill
-fi
+# Get the PID of the process without using kill or killall
+PID=$(pgrep -f 4-to_infinity_and_beyond)
+
+# Send signal 15 (SIGTERM) via /proc
+echo "15" > "/proc/$PID/kill"
