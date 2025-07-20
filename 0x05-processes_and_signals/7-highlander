@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Trap SIGTERM signal and print custom message instead of terminating
+trap 'echo "I am invincible!!!"' SIGTERM
+
+# Infinite loop printing "To infinity and beyond" every 2 seconds
+while true
+do
+  echo "To infinity and beyond"
+  sleep 2
+done
