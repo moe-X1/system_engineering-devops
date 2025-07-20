@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# A Bash script that lists all currently running processes including those without TTY,
+# showing user, PID, CPU, MEM, VSZ, RSS, TTY, STAT, START, TIME and COMMAND
+# with a process hierarchy (tree) visualization
+
+ps axjf
